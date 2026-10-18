@@ -4,4 +4,3 @@
 /stages         /                                 301
 /qa-for-all     /                                 301
 /plan-*         /free-audit?cta=redirect-plan     301
-/*              /index.html                       200

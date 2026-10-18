@@ -1,3 +1,7 @@
-/stages    /services    301
-/qa-for-all    /services    301
-/*    /index.html   200
+/contact        /free-audit?cta=redirect-contact  301
+/quote          /free-audit?cta=redirect-quote    301
+/pricing        /free-audit?cta=redirect-pricing  301
+/stages         /                                 301
+/qa-for-all     /                                 301
+/plan-*         /free-audit?cta=redirect-plan     301
+/*              /index.html                       200

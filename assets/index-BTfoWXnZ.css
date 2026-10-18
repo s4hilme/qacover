@@ -1280,3 +1280,221 @@
     padding: 32px 20px;
   }
 }
+
+
+/* -------------------------------------------------------------
+   FREE AUDIT PAGE & FORM STYLES
+   ------------------------------------------------------------- */
+.fa-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 36px;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.fa-info-box {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.fa-info-badge {
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  color: #064e3b;
+  background: #e6f9f0;
+  border: 1px solid #bbf7d0;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.fa-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fa-features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.step-badge-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #047857;
+  font-size: 11px;
+  font-weight: 750;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.fa-features-list strong {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 650;
+  color: #0f172a;
+  margin-bottom: 2px;
+}
+
+.fa-features-list p {
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.fa-founder-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.fa-form-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 40px 36px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.fa-field-group {
+  margin-bottom: 20px;
+}
+
+.fa-field-label {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 650;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+
+.fa-type-row {
+  display: flex;
+  gap: 12px;
+}
+
+.fa-type-pill {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 13.5px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 1.5px solid #cbd5e1;
+  background: #f8fafc;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.fa-type-pill.active {
+  border-color: #00b87c;
+  background: #f0fdf4;
+  color: #064e3b;
+  font-weight: 700;
+}
+
+.fa-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.fa-field {
+  margin-bottom: 16px;
+}
+
+.fa-field-input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14.5px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffff;
+  color: #0f172a;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.fa-field-input:focus {
+  border-color: #00b87c;
+  box-shadow: 0 0 0 3px rgba(0, 184, 124, 0.15);
+}
+
+.fa-hint {
+  display: block;
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.fa-checkbox-row {
+  margin: 16px 0;
+  font-size: 14px;
+  color: #334155;
+  font-weight: 500;
+}
+
+.fa-checkbox-row label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.fa-nda-foot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #64748b;
+  margin-top: 16px;
+  line-height: 1.4;
+}
+
+.fa-error-alert {
+  background: #fef2f2;
+  border: 1.5px solid #f87171;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  color: #991b1b;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+@media (max-width: 860px) {
+  .fa-layout-grid {
+    grid-template-columns: 1fr;
+  }
+  .fa-row-2 {
+    grid-template-columns: 1fr;
+  }
+  .fa-form-card {
+    padding: 28px 20px;
+  }
+}

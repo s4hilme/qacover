@@ -1,0 +1,37 @@
+# QAcover — Software QA Testing & Test Automation
+
+> QAcover is an independent software quality engineering company specializing in manual exploratory testing, Playwright & Cypress test automation, and white-label QA for high-velocity software teams, startups, and development agencies.
+
+## Overview & Core Offerings
+- **Manual Exploratory QA**: Human-led exploratory bug hunts, boundary value analysis, regression sign-offs, and usability testing across real physical devices (iOS, Android, macOS, Windows).
+- **Test Automation Services**: Robust, maintainable end-to-end regression test suites engineered in Playwright, Cypress, and Appium with TypeScript/Python. CI/CD integration with GitHub Actions, GitLab CI, and CircleCI.
+- **Playwright Test Automation**: Dedicated Playwright test framework implementation, parallel worker execution, trace viewer diagnostics, and auto-waiting stability.
+- **Mobile App QA**: Testing native and cross-platform iOS and Android applications across physical device matrices under fluctuating network conditions.
+- **API & Backend Testing**: Validating REST and GraphQL APIs, authentication flows, payload schemas, and backend response times.
+- **White-Label QA for Agencies**: Turnkey quality assurance for dev shops, SaaS agencies, and design studios delivered under strict white-label NDA.
+- **Chandigarh Tricity QA**: Local senior QA partner serving the Chandigarh IT corridor (IT Park Chandigarh, Mohali Sector 67/82/QuarkCity, Panchkula, and Zirakpur) as well as product teams worldwide.
+
+## Key Policies & Turnaround
+- **Free Flow Audit**: 1 key user flow tested on real devices with a prioritized bug report delivered within 3 business days under mutual NDA.
+- **Response SLA**: 1 business day response (IST) with daily sprint overlap for US, UK/Europe, and APAC timezones.
+- **Confidentiality**: Bilateral Mutual NDA, zero retention of production client data, and complete client IP ownership.
+
+## Key URLs & Resources
+- Homepage: https://qacover.com/
+- All QA Services: https://qacover.com/services
+- Manual QA Testing: https://qacover.com/services/manual-qa
+- Test Automation: https://qacover.com/services/automation-qa
+- Playwright Automation: https://qacover.com/services/playwright-testing
+- Mobile App QA: https://qacover.com/services/mobile-app-testing
+- API Testing: https://qacover.com/services/api-testing
+- White-Label Agency QA: https://qacover.com/white-label
+- Chandigarh Tricity QA: https://qacover.com/qa-testing-chandigarh
+- How It Works: https://qacover.com/how-it-works
+- Free Flow Audit Request: https://qacover.com/free-audit
+- Privacy Policy: https://qacover.com/privacy
+
+## Contact
+- Email: hello@qacover.com
+- WhatsApp: +91 98724 92649
+- Location: Chandigarh Tricity, India (serving global teams)
+

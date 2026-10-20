@@ -1,18 +1,17 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
-Disallow:
+Disallow: /thank-you
 
 User-agent: Googlebot
 Allow: /
-Disallow:
+Disallow: /thank-you
 
 User-agent: Googlebot-Image
 Allow: /
-Disallow:
 
 User-agent: Bingbot
 Allow: /
-Disallow:
+Disallow: /thank-you
 
 Sitemap: https://qacover.com/sitemap.xml

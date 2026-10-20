@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="QAcover" />
     <meta property="og:title" content="Audit Request Received | QAcover" />
     <meta property="og:description" content="Thank you for requesting a free flow audit with QAcover. We reply within 1 business day (IST)." />
-    <meta property="og:image" content="https://qacover.com/images/hero-character.webp" />
+    <meta property="og:image" content="https://qacover.com/images/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="en_IN" />
@@ -28,19 +28,116 @@
     <meta name="twitter:url" content="https://qacover.com/thank-you" />
     <meta name="twitter:title" content="Audit Request Received | QAcover" />
     <meta name="twitter:description" content="Thank you for requesting a free flow audit with QAcover. We reply within 1 business day (IST)." />
-    <meta name="twitter:image" content="https://qacover.com/images/hero-character.webp" />
+    <meta name="twitter:image" content="https://qacover.com/images/og-image.png" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Preload & Load Main Stylesheet Immediately at Head Top -->
+    <link rel="preload" href="/assets/index-BTfoWXnZ.css" as="style" />
+    <link rel="stylesheet" crossorigin href="/assets/index-BTfoWXnZ.css" />
+
+    
+<style>
+/* Instant First-Paint Layout - Prevents unstyled flash */
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+}
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 72px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+.navbar .container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.navbar-logo-img {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.navbar-menu a {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #334155;
+  text-decoration: none;
+}
+.navbar-cta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  color: #0f172a;
+}
+.mobile-email-link {
+  display: none;
+}
+@media (max-width: 768px) {
+  .navbar-menu, .navbar-cta {
+    display: none !important;
+  }
+  .mobile-toggle {
+    display: flex !important;
+  }
+  .navbar-logo-img {
+    height: 36px !important;
+  }
+}
+</style>
+
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="alternate icon" type="image/png" href="/images/logo-dark.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-    <!-- Structured Data / JSON-LD for Google & Search Engines -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data / JSON-LD for Google & Search Engines (LocalBusiness, Breadcrumbs, FAQs) -->
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -56,7 +153,7 @@
       ],
       "url": "https://qacover.com",
       "logo": "https://qacover.com/images/logo-dark.webp",
-      "image": "https://qacover.com/images/hero-character.webp",
+      "image": "https://qacover.com/images/og-image.png",
       "email": "hello@qacover.com",
       "telephone": "+919872492649",
       "priceRange": "$$",
@@ -90,16 +187,7 @@
           "name": "Zirakpur"
         }
       ],
-      "sameAs": [
-        "https://www.linkedin.com/in/sahil-lohran-475791317/"
-      ],
-      "description": "QAcover is an independent software QA company based in Chandigarh tricity, serving Chandigarh, Mohali, Panchkula, and Zirakpur as well as global engineering teams with manual exploratory testing, Playwright/Cypress test automation, and white-label QA under NDA.",
-      "founder": {
-        "@type": "Person",
-        "name": "Sahil Lohran",
-        "jobTitle": "Founder & Lead QA",
-        "sameAs": "https://www.linkedin.com/in/sahil-lohran-475791317/"
-      }
+      "description": "QAcover is an independent software QA company based in Chandigarh tricity, serving Chandigarh, Mohali, Panchkula, and Zirakpur as well as global engineering teams with manual exploratory testing, Playwright/Cypress test automation, and white-label QA under NDA."
     },
     {
       "@type": "ProfessionalService",
@@ -115,9 +203,9 @@
         "Test Automation Services",
         "Playwright Automation",
         "Cypress Automation",
-        "White-Label QA for Agencies",
+        "Mobile App Testing",
         "API & Backend Validation",
-        "Mobile App Testing"
+        "White-Label QA for Agencies"
       ],
       "areaServed": [
         "Chandigarh",
@@ -126,39 +214,66 @@
         "Zirakpur",
         "Worldwide"
       ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://qacover.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Audit Request Received",
+          "item": "https://qacover.com/thank-you"
+        }
+      ]
     }
   ]
 }
     </script>
     <script type="module" crossorigin src="/assets/index-FpVXcGDL.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BTfoWXnZ.css">
   </head>
   <body>
     <div id="root">
       <div class="app-container">
         
-<header class="v1-navbar">
-  <div class="v1-navbar-container">
-    <a href="/" class="v1-brand-link">
-      <img src="/images/logo-dark.webp" alt="QAcover" style="height: 32px; width: auto; display: block;" />
-    </a>
-    <nav class="v1-nav-menu">
-      <a href="/services" class="v1-nav-link">Services</a>
-      <a href="/how-it-works" class="v1-nav-link">How it works</a>
-      <a href="/white-label" class="v1-nav-link">White-label</a>
-      <a href="/about" class="v1-nav-link">About</a>
-      <a href="/free-audit" class="v1-nav-cta">Get a free flow audit &rarr;</a>
-    </nav>
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="/" class="navbar-logo">
+        <img src="/images/logo-dark.webp" alt="QAcover" class="navbar-logo-img" style="height: 38px; width: auto; display: block;" />
+      </a>
+      <div class="navbar-menu">
+        <a href="/" class="active">Home</a>
+        <a href="/services">Services</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/white-label">White-label</a>
+        <a href="/about">About</a>
+        <a href="mailto:hello@qacover.com?subject=Book%20a%2020-min%20QA%20Strategy%20Call" class="mobile-email-link">Email us to book a 20-min call</a>
+        <a href="/free-audit?cta=nav_mobile" class="btn btn-primary btn-sm mobile-menu-cta">Get a free flow audit &rarr;</a>
+      </div>
+      <div class="navbar-cta">
+        <a href="mailto:hello@qacover.com?subject=Book%20a%2020-min%20QA%20Strategy%20Call" class="navbar-cta-email">Email us to book a 20-min call</a>
+        <a href="/free-audit?cta=nav" class="btn btn-primary btn-sm" style="padding: 8px 18px; font-size: 13.5px; text-decoration: none;">Get a free flow audit &rarr;</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Toggle menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+      </button>
+    </div>
   </div>
-</header>
+</nav>
 
         
-<div class="contact-page">
+<div class="contact-page" style="padding-top: 100px;">
   <div class="container-lg">
     <section class="contact-hero">
       <span class="cp-pill-badge">REQUEST RECEIVED</span>
       <h1 class="cp-hero-title">Audit Request <span class="highlight">Confirmed!</span></h1>
-      <p class="cp-hero-desc">Thank you for trusting QAcover. Sahil has received your request and will personally review it.</p>
+      <p class="cp-hero-desc">Thank you for trusting QAcover. Our QA team has received your request and will review your flow.</p>
     </section>
   </div>
   <div class="info-page-container">
@@ -168,7 +283,7 @@
       <p style="font-size:15.5px;color:#334155;line-height:1.65;margin-bottom:24px;">We reply within 1 business day (IST). Report within 3 business days of access. We will review your application link and reach out via email to execute our Mutual NDA and receive test logins.</p>
       <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
         <a href="/" class="btn btn-primary">Return to Homepage &rarr;</a>
-        <a href="https://wa.me/919872492649?text=Hi%20QAcover%2C%20I%20just%20submitted%20a%20flow%20audit" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="background:#fff;border-color:#cbd5e1;text-decoration:none;display:inline-flex;align-items:center;">Chat with Sahil on WhatsApp &rarr;</a>
+        <a href="https://wa.me/919872492649?text=Hi%20QAcover%2C%20I%20just%20submitted%20a%20flow%20audit" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="background:#fff;border-color:#cbd5e1;text-decoration:none;display:inline-flex;align-items:center;">Chat with us on WhatsApp &rarr;</a>
       </div>
     </div>
   </div>
@@ -180,7 +295,7 @@
     <div class="v1-footer-grid">
       <div class="v1-footer-brand">
         <a href="/" style="display:inline-block;text-decoration:none;margin-bottom:12px;">
-          <img src="/images/logo-dark.webp" alt="QAcover" style="height:30px;width:auto;display:block;" />
+          <img src="/images/logo-dark.webp" alt="QAcover" style="height:34px;width:auto;display:block;" />
         </a>
         <p>Manual + automation QA testing for product teams and agencies. Working inside your sprints under strict NDA.</p>
         <div class="v1-footer-contact-list">
@@ -194,8 +309,10 @@
         <ul>
           <li><a href="/services/manual-qa">Manual QA</a></li>
           <li><a href="/services/automation-qa">Test Automation</a></li>
+          <li><a href="/services/playwright-testing">Playwright Automation</a></li>
+          <li><a href="/services/mobile-app-testing">Mobile App QA</a></li>
+          <li><a href="/services/api-testing">API &amp; Backend Testing</a></li>
           <li><a href="/white-label">White-Label QA</a></li>
-          <li><a href="/services">All QA Services &rarr;</a></li>
           <li><a href="/free-audit" style="color:#00b87c;font-weight:750;">Get a Free Flow Audit &rarr;</a></li>
         </ul>
       </div>
@@ -212,11 +329,17 @@
       </div>
       <div class="v1-footer-col">
         <h5>CONNECT</h5>
-        <p style="color:#64748b;font-size:13.5px;line-height:1.5;margin:0 0 16px 0;">Direct access to our founder. No sales reps or gatekeepers.</p>
-        <a href="https://www.linkedin.com/in/sahil-lohran-475791317/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;color:#064e3b;font-weight:700;font-size:14px;text-decoration:none;margin-bottom:12px;">
-          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg>
-          Sahil on LinkedIn &rarr;
-        </a>
+        <div class="footer-social-row">
+          <a href="https://wa.me/919872492649?text=Hi%20QAcover%2C%20I%20have%20a%20QA%20question" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="WhatsApp" title="WhatsApp: +91 98724 92649">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.32-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/qacoverr/?viewAsMember=true" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="LinkedIn" title="QAcover on LinkedIn">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+          </a>
+          <a href="mailto:hello@qacover.com" class="footer-social-icon" aria-label="Email" title="Email: hello@qacover.com">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+        </div>
         <div>
           <a href="mailto:hello@qacover.com?subject=Book%20a%2020-min%20QA%20Strategy%20Call" style="color:#475569;font-size:13px;text-decoration:underline;">Email us to book a 20-min call</a>
         </div>

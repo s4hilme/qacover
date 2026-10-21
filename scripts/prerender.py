@@ -752,8 +752,8 @@ def render_page(page):
     <meta name="twitter:image" content="https://qacover.com/images/og-image.png" />
 
     <!-- Preload & Load Main Stylesheet Immediately at Head Top -->
-    <link rel="preload" href="/assets/index-BTfoWXnZ.css" as="style" />
-    <link rel="stylesheet" crossorigin href="/assets/index-BTfoWXnZ.css" />
+    <link rel="preload" href="/assets/index-D1a0e91f.css" as="style" />
+    <link rel="stylesheet" crossorigin href="/assets/index-D1a0e91f.css" />
 
     {CRITICAL_CSS}
 
@@ -772,7 +772,7 @@ def render_page(page):
     <script type="application/ld+json">
 {schema_str}
     </script>
-    <script type="module" crossorigin src="/assets/index-FpVXcGDL.js"></script>
+    <script type="module" crossorigin src="/assets/index-E2b1f02a.js"></script>
   </head>
   <body>
     <div id="root">

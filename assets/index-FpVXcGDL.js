@@ -985,7 +985,6 @@ function ExitRetentionModal({onNavigate:e}){
   const[origTitle,setOrigTitle]=M.useState("");
 
   M.useEffect(()=>{
-    // 1. Mouse leaving viewport (towards top browser tabs/close)
     const handleMouseLeave=(ev)=>{
       if(ev.clientY<=15 && !sessionStorage.getItem("qacover_exit_dismissed")){
         setIsOpen(!0);
@@ -994,11 +993,10 @@ function ExitRetentionModal({onNavigate:e}){
     };
     document.addEventListener("mouseleave",handleMouseLeave);
 
-    // 2. Tab switch detection & tab title attention switcher
     const handleVisibilityChange=()=>{
       if(document.hidden){
         setOrigTitle(document.title);
-        document.title="⚠️ Wait! Claim Your Free Flow Audit | QAcover";
+        document.title="\u26a0\ufe0f Wait! Claim Your Free Flow Audit | QAcover";
         window.logQAcoverRUM && window.logQAcoverRUM("tab_switch_hidden",{path:window.location.pathname});
       }else{
         if(origTitle) document.title=origTitle;
@@ -1010,7 +1008,6 @@ function ExitRetentionModal({onNavigate:e}){
     };
     document.addEventListener("visibilitychange",handleVisibilityChange);
 
-    // 3. Escape key closes modal
     const handleKeyDown=(ev)=>{
       if(ev.key==="Escape")handleDismiss();
     };
@@ -1039,21 +1036,22 @@ function ExitRetentionModal({onNavigate:e}){
 
   if(!isOpen)return null;
 
-  return r.jsx("div",{className:"exit-modal-backdrop",onClick:handleDismiss,children:
-    r.jsxs("div",{className:"exit-modal-card",onClick:(ev)=>ev.stopPropagation(),children:[
-      r.jsx("button",{className:"exit-modal-close",onClick:handleDismiss,"aria-label":"Close popup",children:"✕"}),
-      r.jsx("span",{className:"exit-modal-badge",children:"WAIT — BEFORE YOU GO"}),
-      r.jsx("h2",{className:"exit-modal-title",children:"Find out what's broken before your users do."}),
-      r.jsx("p",{className:"exit-modal-desc",children:"Get a free, confidential exploratory QA audit of one key user flow (auth, checkout, or onboarding). We test on real devices and send back a prioritized defect report within 3 business days under mutual NDA."}),
-      r.jsxs("div",{className:"exit-modal-checklist",children:[
-        r.jsxs("div",{className:"exit-modal-check-item",children:[r.jsx("span",{className:"exit-modal-check-icon",children:"✓"}),"100% Free under mutual NDA protection"]}),
-        r.jsxs("div",{className:"exit-modal-check-item",children:[r.jsx("span",{className:"exit-modal-check-icon",children:"✓"}),"Tested on real physical iOS, Android & Desktop browsers"]}),
-        r.jsxs("div",{className:"exit-modal-check-item",children:[r.jsx("span",{className:"exit-modal-check-icon",children:"✓"}),"Actionable bug reproduction videos & console traces"]})
+  return r.jsxs("div",{className:"exit-modal-backdrop",style:{position:"fixed",top:0,left:0,right:0,bottom:0,backgroundColor:"rgba(15,23,42,0.78)",backdropFilter:"blur(8px)",WebkitBackdropFilter:"blur(8px)",zIndex:999999,display:"flex",alignItems:"center",justifyContent:"center",padding:"20px",boxSizing:"border-box"},onClick:handleDismiss,children:[
+    r.jsx("style",{children:`.exit-modal-backdrop{animation:exitModalFadeIn 0.25s cubic-bezier(0.16,1,0.3,1) forwards}@keyframes exitModalFadeIn{from{opacity:0}to{opacity:1}}.exit-modal-card{animation:exitModalSlideUp 0.3s cubic-bezier(0.16,1,0.3,1) forwards}@keyframes exitModalSlideUp{from{opacity:0;transform:scale(0.94) translateY(14px)}to{opacity:1;transform:scale(1) translateY(0)}}.exit-modal-close:hover{background-color:#e2e8f0!important;color:#0f172a!important}.exit-modal-cta-btn:hover{background-color:#047857!important;transform:translateY(-1px);box-shadow:0 6px 18px rgba(6,78,59,0.45)!important}.exit-modal-dismiss-link:hover{color:#64748b!important}@media(max-width:600px){.exit-modal-card{padding:26px 18px!important}.exit-modal-title{font-size:21px!important}.exit-modal-desc{font-size:13.5px!important}}`}),
+    r.jsxs("div",{className:"exit-modal-card",style:{backgroundColor:"#ffffff",borderRadius:"20px",maxWidth:"540px",width:"100%",padding:"36px 32px",position:"relative",boxShadow:"0 25px 60px -15px rgba(0,0,0,0.3), 0 0 0 1px rgba(16,185,129,0.15)",textAlign:"center",boxSizing:"border-box",fontFamily:"'Plus Jakarta Sans',-apple-system,sans-serif"},onClick:(ev)=>ev.stopPropagation(),children:[
+      r.jsx("button",{className:"exit-modal-close",style:{position:"absolute",top:"18px",right:"18px",backgroundColor:"#f1f5f9",border:"none",borderRadius:"50%",width:"34px",height:"34px",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"18px",color:"#64748b",cursor:"pointer",lineHeight:1},onClick:handleDismiss,"aria-label":"Close popup",children:"\u2715"}),
+      r.jsx("span",{className:"exit-modal-badge",style:{display:"inline-flex",alignItems:"center",gap:"6px",padding:"6px 14px",backgroundColor:"#ecfdf5",border:"1px solid #a7f3d0",borderRadius:"999px",color:"#047857",fontSize:"12px",fontWeight:700,letterSpacing:"0.05em",textTransform:"uppercase",marginBottom:"16px"},children:"WAIT \u2014 BEFORE YOU GO"}),
+      r.jsx("h2",{className:"exit-modal-title",style:{fontSize:"26px",fontWeight:700,color:"#064e3b",letterSpacing:"-0.02em",margin:"0 0 12px 0",lineHeight:1.25},children:"Find out what's broken before your users do."}),
+      r.jsx("p",{className:"exit-modal-desc",style:{fontSize:"15px",color:"#475569",lineHeight:1.6,margin:"0 0 22px 0"},children:"Get a free, confidential exploratory QA audit of one key user flow (auth, checkout, or onboarding). We test on real devices and send back a prioritized defect report within 3 business days under mutual NDA."}),
+      r.jsxs("div",{className:"exit-modal-checklist",style:{display:"flex",flexDirection:"column",gap:"10px",textAlign:"left",backgroundColor:"#f8fafc",padding:"16px 20px",borderRadius:"12px",marginBottom:"24px",border:"1px solid #e2e8f0"},children:[
+        r.jsxs("div",{className:"exit-modal-check-item",style:{display:"flex",alignItems:"center",gap:"10px",fontSize:"14px",fontWeight:500,color:"#1e293b"},children:[r.jsx("span",{className:"exit-modal-check-icon",style:{color:"#10b981",fontWeight:700,fontSize:"15px"},children:"\u2713"}),"100% Free under mutual NDA protection"]}),
+        r.jsxs("div",{className:"exit-modal-check-item",style:{display:"flex",alignItems:"center",gap:"10px",fontSize:"14px",fontWeight:500,color:"#1e293b"},children:[r.jsx("span",{className:"exit-modal-check-icon",style:{color:"#10b981",fontWeight:700,fontSize:"15px"},children:"\u2713"}),"Tested on real physical iOS, Android & Desktop browsers"]}),
+        r.jsxs("div",{className:"exit-modal-check-item",style:{display:"flex",alignItems:"center",gap:"10px",fontSize:"14px",fontWeight:500,color:"#1e293b"},children:[r.jsx("span",{className:"exit-modal-check-icon",style:{color:"#10b981",fontWeight:700,fontSize:"15px"},children:"\u2713"}),"Actionable bug reproduction videos & console traces"]})
       ]}),
-      r.jsx("button",{className:"exit-modal-cta-btn",onClick:handleClaim,children:"Claim My Free Flow Audit →"}),
-      r.jsx("button",{className:"exit-modal-dismiss-link",onClick:handleDismiss,children:"No thanks, I will test it myself"})
+      r.jsx("button",{className:"exit-modal-cta-btn",style:{width:"100%",padding:"14px 24px",fontSize:"16px",fontWeight:650,backgroundColor:"#064e3b",color:"#ffffff",border:"none",borderRadius:"12px",cursor:"pointer",boxShadow:"0 4px 14px rgba(6,78,59,0.35)",display:"block",transition:"all 0.2s ease"},onClick:handleClaim,children:"Claim My Free Flow Audit \u2192"}),
+      r.jsx("button",{className:"exit-modal-dismiss-link",style:{display:"inline-block",marginTop:"14px",fontSize:"13px",color:"#94a3b8",textDecoration:"underline",cursor:"pointer",background:"none",border:"none",padding:"4px"},onClick:handleDismiss,children:"No thanks, I will test it myself"})
     ]})
-  });
+  ]});
 }
 
 // Real User Monitoring (RUM) Engine
